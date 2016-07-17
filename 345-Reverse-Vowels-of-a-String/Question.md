@@ -18,12 +18,6 @@ Given s = "leetcode", return "leotcede".
 
 <div>
 
-<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
-
-<span class="hidebutton">[Google](/company/google/)</span></div>
-
-<div>
-
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Two Pointers](/tag/two-pointers/) [String](/tag/string/)</span></div>
