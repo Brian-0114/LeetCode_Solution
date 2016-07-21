@@ -23,6 +23,12 @@ Implement the following operations of a queue using stacks.
 
 <div>
 
+<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
+
+<span class="hidebutton">[Bloomberg](/company/bloomberg/) [Microsoft](/company/microsoft/)</span></div>
+
+<div>
+
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Stack](/tag/stack/) [Design](/tag/design/)</span></div>
