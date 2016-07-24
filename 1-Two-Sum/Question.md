@@ -25,12 +25,6 @@ The return format had been changed to **zero-based** indices. Please read the ab
 
 <div>
 
-<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
-
-<span class="hidebutton">[Adobe](/company/adobe/) [Airbnb](/company/airbnb/) [Amazon](/company/amazon/) [Apple](/company/apple/) [Bloomberg](/company/bloomberg/) [Dropbox](/company/dropbox/) [Facebook](/company/facebook/) [LinkedIn](/company/linkedin/) [Microsoft](/company/microsoft/) [Uber](/company/uber/) [Yahoo](/company/yahoo/) [Yelp](/company/yelp/)</span></div>
-
-<div>
-
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Array](/tag/array/) [Hash Table](/tag/hash-table/)</span></div>
