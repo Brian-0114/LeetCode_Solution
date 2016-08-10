@@ -9,9 +9,9 @@ public class Solution {
             if(nums[p2]==nums[p1]){
                 p2++;
             }else{
-                p1++;
-                nums[p1]=nums[p2];
-                p2++;
+                p1++;  //p1 jump to the index at which the number is going to be overwritten
+                nums[p1]=nums[p2];  //replace
+                p2++;   //update p2
             }
         }
         return p1+1;
