@@ -5,16 +5,18 @@
 
 public class Solution extends GuessGame {
     public int guessNumber(int n) {
-        int l = 1;
+        int l = 0;
         int h = n;
-        while(l<=h){
+        while(l+1< h){
             int mid = l+(h-l)/2;
             int result = guess(mid);
             if(result == 0) return mid;
-            else if(result ==1) l=mid+1;
-            else h=mid-1;
+            else if(result ==1) l=mid;
+            else h=mid;
         }
         
-        return -1;
+        if(guess(l)==0) return l;
+        else if(guess(h) == 0) return h;
+        else return -1;
     }
 }
