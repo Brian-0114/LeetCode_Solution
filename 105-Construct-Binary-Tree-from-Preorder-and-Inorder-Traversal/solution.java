@@ -8,36 +8,35 @@
  * }
  */
 public class Solution {
-    private int findPosition(int[] arr, int start, int end, int key) {
-        int i;
-        for (i = start; i <= end; i++) {
-            if (arr[i] == key) {
-                return i;
-            }
-        }
-        return -1;
+  public TreeNode buildTree(int[] preorder, int[] inorder) {
+    int preStart = 0;
+    int preEnd = preorder.length-1;
+    int inStart = 0;
+    int inEnd = inorder.length-1;
+ 
+    return construct(preorder, preStart, preEnd, inorder, inStart, inEnd);
+}
+ 
+public TreeNode construct(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd){
+    if(preStart>preEnd||inStart>inEnd){
+        return null;
     }
-
-    private TreeNode myBuildTree(int[] inorder, int instart, int inend,
-            int[] preorder, int prestart, int preend) {
-        if (instart > inend) {
-            return null;
+ 
+    int val = preorder[preStart];
+    TreeNode p = new TreeNode(val);
+ 
+    //find parent element index from inorder
+    int k=0;
+    for(int i=0; i<inorder.length; i++){
+        if(val == inorder[i]){
+            k=i;
+            break;
         }
-
-        TreeNode root = new TreeNode(preorder[prestart]);
-        int position = findPosition(inorder, instart, inend, preorder[prestart]);
-
-        root.left = myBuildTree(inorder, instart, position - 1,
-                preorder, prestart + 1, prestart + position - instart);
-        root.right = myBuildTree(inorder, position + 1, inend,
-                preorder, position - inend + preend + 1, preend);
-        return root;
     }
-
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
-        if (inorder.length != preorder.length) {
-            return null;
-        }
-        return myBuildTree(inorder, 0, inorder.length - 1, preorder, 0, preorder.length - 1);
-    }
+ 
+    p.left = construct(preorder, preStart+1, preStart+(k-inStart), inorder, inStart, k-1);
+    p.right= construct(preorder, preStart+(k-inStart)+1, preEnd, inorder, k+1 , inEnd);
+ 
+    return p;
+}
 }
