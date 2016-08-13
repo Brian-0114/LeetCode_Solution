@@ -1,5 +1,5 @@
 public class Solution {
-    public int findMin(int[] nums) {
+public int findMin(int[] nums) {
         if(nums== null || nums.length == 0) return -1;
         
         int start = 0, end = nums.length -1;
@@ -14,4 +14,5 @@ public class Solution {
         if(nums[start] <= target) return nums[start];
         else return nums[end];
     }
+
 }
