@@ -18,12 +18,6 @@ You may assume no duplicate exists in the array.
 
 <div>
 
-<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
-
-<span class="hidebutton">[Microsoft](/company/microsoft/)</span></div>
-
-<div>
-
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Array](/tag/array/) [Binary Search](/tag/binary-search/)</span></div>
