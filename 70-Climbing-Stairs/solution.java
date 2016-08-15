@@ -5,11 +5,12 @@ public class Solution {
         p[0] = 0;
         p[1] = 1;
         p[2] = 2;
-        
+        int res = Math.max(p[0],Math.max(p[1],p[2]));
         for(int i=3;i<=n;i++){
-            p[i] = p[i-1] + p[i-2];
+            p[i%3] = p[(i-1)%3] + p[(i-2)%3];
+            res = Math.max(res,p[i%3]);
         }
         
-        return p[n];
+        return res;
     }
 }
