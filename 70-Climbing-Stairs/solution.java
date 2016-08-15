@@ -6,7 +6,7 @@ public class Solution {
         p[1] = 1;
         p[2] = 2;
         
-        for(int i=3;i<n+1;i++){
+        for(int i=3;i<=n;i++){
             p[i] = p[i-1] + p[i-2];
         }
         
