@@ -13,8 +13,8 @@ public class Solution {
             
         HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
         LinkedList<UndirectedGraphNode> queue = new LinkedList<UndirectedGraphNode>();
-        UndirectedGraphNode head = new UndirectedGraphNode(node.label);
-        map.put(node, head);
+        UndirectedGraphNode copyNode = new UndirectedGraphNode(node.label);
+        map.put(node, copyNode);
         queue.add(node);
         
         while(!queue.isEmpty()){
@@ -25,11 +25,11 @@ public class Solution {
                     UndirectedGraphNode new_neighbor = new UndirectedGraphNode(neighbor.label);
                     map.put(neighbor, new_neighbor);
                 }
-                map.get(temp).neighbors.add(map.get(neighbor));
+                map.get(temp).neighbors.add(map.get(neighbor));  //clone edges
             }
         }
         
-        return head;
+        return copyNode;
     
     }
 }
