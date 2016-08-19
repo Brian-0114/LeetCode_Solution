@@ -11,22 +11,21 @@ public class Solution {
         if(node == null)
             return null;
             
-        HashMap<UndirectedGraphNode, UndirectedGraphNode> hm = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
+        HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
         LinkedList<UndirectedGraphNode> queue = new LinkedList<UndirectedGraphNode>();
         UndirectedGraphNode head = new UndirectedGraphNode(node.label);
-        hm.put(node, head);
+        map.put(node, head);
         queue.add(node);
         
         while(!queue.isEmpty()){
-            UndirectedGraphNode curnode = queue.poll();
-            for(UndirectedGraphNode aneighbor: curnode.neighbors){//check each neighbor
-                if(!hm.containsKey(aneighbor)){//if not visited,then add to queue
-                    queue.add(aneighbor);
-                    UndirectedGraphNode newneighbor = new UndirectedGraphNode(aneighbor.label);
-                    hm.put(aneighbor, newneighbor);
+            UndirectedGraphNode temp = queue.poll();
+            for(UndirectedGraphNode neighbor: temp.neighbors){//check each neighbor
+                if(!map.containsKey(neighbor)){//if not visited,then add to queue
+                    queue.add(neighbor);
+                    UndirectedGraphNode new_neighbor = new UndirectedGraphNode(neighbor.label);
+                    map.put(neighbor, new_neighbor);
                 }
-                
-                hm.get(curnode).neighbors.add(hm.get(aneighbor));
+                map.get(temp).neighbors.add(map.get(neighbor));
             }
         }
         
