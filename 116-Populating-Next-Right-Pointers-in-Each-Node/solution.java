@@ -12,10 +12,10 @@ public class Solution {
             return;
         }
          
-        TreeLinkNode curr = root;
+        TreeLinkNode curr = root;  //current node
          
         while (curr != null && curr.left != null && curr.right != null) {
-            TreeLinkNode p = curr;
+            TreeLinkNode p = curr;   //初始一个p来遍历
             while (p != null) {
                 if (p.left != null) {
                     p.left.next = p.right;
@@ -28,7 +28,7 @@ public class Solution {
                 p = p.next;
             }
              
-            curr = curr.left;
+            curr = curr.left;  //往下一层
         }
     }
     
