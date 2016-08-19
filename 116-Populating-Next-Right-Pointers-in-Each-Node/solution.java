@@ -7,7 +7,7 @@
  * }
  */
 public class Solution {
-  public void connect(TreeLinkNode root) {
+        public void connect(TreeLinkNode root) {
         if(root==null)
             return;
         Queue<TreeLinkNode> q=new LinkedList<TreeLinkNode>();
