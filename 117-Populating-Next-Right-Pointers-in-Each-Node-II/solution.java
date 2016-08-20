@@ -12,13 +12,13 @@ public class Solution {
             return;
         }
 
-        TreeLinkNode parent = root;
-        TreeLinkNode pre;
-        TreeLinkNode next;
+        TreeLinkNode parent = root;  //current node of current level
+        TreeLinkNode pre;  //the leading node on the next level
+        TreeLinkNode next;  //head of the next level
         while (parent != null) {
             pre = null;
             next = null;
-            while (parent != null) {
+            while (parent != null) {    //iterate on the current level
                 if (next == null){
                     next = (parent.left != null) ? parent.left: parent.right;
                 }
@@ -40,9 +40,9 @@ public class Solution {
                         pre = parent.right;
                     }
                 }
-                parent = parent.next;
+                parent = parent.next;   //move to next node on the same level
             }
-            parent = next;
+            parent = next;  //move down
         }
     }
 }
