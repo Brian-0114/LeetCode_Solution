@@ -25,12 +25,6 @@ For _k_ = 3, you should return: `3->2->1->4->5`
 
 <div>
 
-<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
-
-<span class="hidebutton">[Facebook](/company/facebook/) [Microsoft](/company/microsoft/)</span></div>
-
-<div>
-
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Linked List](/tag/linked-list/)</span></div>
